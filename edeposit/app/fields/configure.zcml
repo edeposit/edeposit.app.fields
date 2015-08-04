@@ -1,8 +1,36 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
     i18n_domain="edeposit.app.fields">
 
   <five:registerPackage package="." initialize=".initialize" />
+
+  <adapter
+      factory="edeposit.app.fields.isbn.ISBNFieldWidget"
+      for="edeposit.app.fields.interfaces.IISBNLine
+           z3c.form.interfaces.IFormLayer"
+      />
+
+  <z3c:widgetTemplate
+      mode="display"
+      widget="edeposit.app.fields.interfaces.IISBNWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="browser/isbn_display.pt"
+      />
+
+  <z3c:widgetTemplate
+      mode="input"
+      widget="edeposit.app.fields.interfaces.IISBNWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="browser/isbn_input.pt"
+      />
+
+  <z3c:widgetTemplate
+      mode="hidden"
+      widget="edeposit.app.fields.interfaces.IISBNWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="browser/isbn_hidden.pt"
+      />
 
 </configure>

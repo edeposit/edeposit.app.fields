@@ -1,17 +1,25 @@
-from zope.interface import implementer, implements, implementsOnly
-from zope.component import adapter
+import zope.component
+import zope.interface
+import zope.schema.interfaces
 
-from z3c.form.interfaces import IFieldWidget, IFormLayer, IDataManager, NOVALUE
-from z3c.form.widget import FieldWidget
-from interfaces import IISBN
-from widgets import ISBNWidget
-from plone.z3cform.layout import FormWrapper
+from z3c.form import interfaces
+from z3c.form.widget import Widget, FieldWidget
+from z3c.form.browser import widget
 
-class ISBNWidget(NamedFileWidget):
-    implements(IVoucherFileWidget)
-    pass
+from .interfaces import IISBNWidget
+from z3c.form.browser.text import TextWidget
 
-@implementer(IFieldWidget)
-@adapter(IISBNField, IFormLayer)
+@zope.interface.implementer_only(IISBNWidget)
+class ISBNWidget(TextWidget):
+    """Input type text widget implementation."""
+
+    klass = u'isbn-widget'
+
+    def update(self):
+        super(ISBNWidget, self).update()
+
+
+@zope.component.adapter(zope.schema.interfaces.IField, interfaces.IFormLayer)
+@zope.interface.implementer(interfaces.IFieldWidget)
 def ISBNFieldWidget(field, request):
     return FieldWidget(field, ISBNWidget(request))
