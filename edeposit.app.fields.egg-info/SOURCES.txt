@@ -11,4 +11,6 @@ edeposit.app.fields.egg-info/requires.txt
 edeposit.app.fields.egg-info/top_level.txt
 edeposit/app/__init__.py
 edeposit/app/fields/__init__.py
+edeposit/app/fields/interfaces.py
+edeposit/app/fields/isbn.py
 edeposit/app/fields/tests.py
