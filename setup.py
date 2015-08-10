@@ -17,7 +17,7 @@ setup(name='edeposit.app.fields',
       keywords='',
       author='',
       author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      url='https://github.com/jstavel/edeposit.app.fields',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['edeposit', 'edeposit.app'],
@@ -26,6 +26,7 @@ setup(name='edeposit.app.fields',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'plone.app.dexterity [grok,relations]',
       ],
       entry_points="""
       # -*- Entry points: -*-

@@ -11,6 +11,10 @@ edeposit.app.fields.egg-info/requires.txt
 edeposit.app.fields.egg-info/top_level.txt
 edeposit/app/__init__.py
 edeposit/app/fields/__init__.py
+<<<<<<< HEAD
+=======
+edeposit/app/fields/_fields.py
+>>>>>>> 60eb74d861a380c5111d7e4ced3d701c2cbac263
 edeposit/app/fields/interfaces.py
 edeposit/app/fields/isbn.py
 edeposit/app/fields/tests.py

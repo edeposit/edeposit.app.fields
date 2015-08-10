@@ -1,6 +1,9 @@
-from zope.schema.interfaces import IASCIILine
+from zope.schema.interfaces import IASCIILine, ITextLine
+from z3c.form.interfaces import ITextWidget
 
-class IISBN(IASCIILine):
-    """ This field represents ISBN """
+class IISBNLine(IASCIILine):
     pass
-    
+
+
+class IISBNWidget(ITextWidget):
+    pass
