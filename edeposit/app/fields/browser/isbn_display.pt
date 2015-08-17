@@ -18,6 +18,7 @@
                           onkeydown view/onkeydown;
                           onkeyup view/onkeyup">
       <tal:block  condition="view/value" content="view/value"/>
-      <span><a href="change-isbn" class="link-overlay change-isbn">změnit</a></span>
+      <span><a tal:condition="view/canChangeISBN"
+               href="change-isbn" class="link-overlay change-isbn">změnit</a></span>
     </span>
 </html>
