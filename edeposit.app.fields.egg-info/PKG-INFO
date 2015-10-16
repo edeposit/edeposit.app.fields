@@ -1,7 +1,7 @@
 Metadata-Version: 1.1
 Name: edeposit.app.fields
 Version: 1.0.0
-Summary: Plone Fields and Widgets for eDeposit
+Summary: Custom Plone fields and widgets for eDeposit project
 Home-page: https://github.com/edeposit/edeposit.app.fields
 Author: Jan Stavěl
 Author-email: stavel.jan@gmail.com
