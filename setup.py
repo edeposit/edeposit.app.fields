@@ -6,7 +6,7 @@ version = '1.0.0'
 
 setup(name='edeposit.app.fields',
       version=version,
-      description="Plone Fields and Widgets for eDeposit",
+      description="Custom Plone fields and widgets for eDeposit project",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
