@@ -1,11 +1,12 @@
+# -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 import os
 
-version = '0.1.0'
+version = '1.0.0'
 
 setup(name='edeposit.app.fields',
       version=version,
-      description="Plone Fields and Widgets for eDeposit",
+      description="Custom Plone fields and widgets for eDeposit project",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -15,9 +16,9 @@ setup(name='edeposit.app.fields',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='https://github.com/jstavel/edeposit.app.fields',
+      author=u'Jan Stavěl',
+      author_email='stavel.jan@gmail.com',
+      url='https://github.com/edeposit/edeposit.app.fields',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['edeposit', 'edeposit.app'],

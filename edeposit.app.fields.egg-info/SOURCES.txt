@@ -1,4 +1,5 @@
 README.txt
+setup.cfg
 setup.py
 edeposit/__init__.py
 edeposit.app.fields.egg-info/PKG-INFO
