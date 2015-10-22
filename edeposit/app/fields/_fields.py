@@ -6,8 +6,8 @@ from zope.interface.interfaces import IInterface
 from zope.interface.interfaces import IMethod
 from zope.schema import ValidationError
 
-from zope.schema import ASCIILine
-from .interfaces import IISBNLine
+from zope.schema import ASCIILine, Choice
+from .interfaces import IISBNLine, IPeriodicity
 from .utils import is_valid_isbn
 
 class WrongFormatOfISBN(ValidationError):
@@ -18,3 +18,7 @@ class ISBNLine(ASCIILine):
     def _validate(self,value):
         if not is_valid_isbn(value):
             raise WrongFormatOfISBN(value)
+
+@implementer(IPeriodicity)
+class PeriodicityChoice(Choice):
+    pass

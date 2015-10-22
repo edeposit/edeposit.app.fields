@@ -54,4 +54,31 @@
       template="browser/isbn_hidden.pt"
       />
 
+  <adapter
+      factory="edeposit.app.fields.periodicity.PeriodicityFieldWidget"
+      for="edeposit.app.fields.interfaces.IPeriodicity
+           z3c.form.interfaces.IFormLayer"
+      />
+
+  <z3c:widgetTemplate
+      mode="display"
+      widget="edeposit.app.fields.interfaces.IPeriodicityWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="browser/periodicity_display.pt"
+      />
+
+  <z3c:widgetTemplate
+      mode="input"
+      widget="edeposit.app.fields.interfaces.IPeriodicityWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="browser/periodicity_input.pt"
+      />
+
+  <z3c:widgetTemplate
+      mode="hidden"
+      widget="edeposit.app.fields.interfaces.IPeriodicityWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="browser/periodicity_hidden.pt"
+      />
+
 </configure>
